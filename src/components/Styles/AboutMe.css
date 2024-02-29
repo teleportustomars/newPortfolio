@@ -1,0 +1,464 @@
+@import url("https://fonts.googleapis.com/css2?family=Neucha&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap");
+.applegreen {
+  background-color: #acc12f;
+  color: #423e3b;
+  border-color: #423e3b;
+}
+.applegreen .h-divider {
+  background-color: #423e3b;
+}
+.applegreen #projectStuff:before {
+  background-color: #6c7d47;
+}
+
+.jet {
+  background-color: #3a3335;
+}
+.jet #projectStuff:before {
+  background-color: #c6d8d3;
+}
+
+.ash {
+  background-color: #c6d8d3;
+  color: #3a3335;
+  border-color: #3a3335;
+}
+.ash .h-divider {
+  background-color: #3a3335;
+}
+.ash #projectStuff:before {
+  background-color: #55034e;
+}
+
+.blackbean {
+  background-color: #2e0e02;
+}
+.blackbean #projectStuff:before {
+  background-color: #55034e;
+}
+
+.darkgreen {
+  background-color: #002e2c;
+}
+.darkgreen #projectStuff:before {
+  background-color: #55034e;
+}
+
+.blackolive {
+  background-color: #423e3b;
+}
+.blackolive #projectStuff:before {
+  background-color: #55034e;
+}
+
+@-webkit-keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    -webkit-filter: drop-shadow(0 0 0.4rem #fff) drop-shadow(0 0 0.2rem white) drop-shadow(0 0 1rem #efbdeb) drop-shadow(0 0 2rem #efbdeb);
+    filter: drop-shadow(0 0 0.4rem #fff) drop-shadow(0 0 0.2rem white) drop-shadow(0 0 1rem #efbdeb) drop-shadow(0 0 2rem #efbdeb);
+  }
+  20%, 24%, 55% {
+    -webkit-filter: none;
+    filter: none;
+  }
+}
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    -webkit-filter: drop-shadow(0 0 0.4rem #fff) drop-shadow(0 0 0.2rem white) drop-shadow(0 0 1rem #efbdeb) drop-shadow(0 0 2rem #efbdeb);
+    filter: drop-shadow(0 0 0.4rem #fff) drop-shadow(0 0 0.2rem white) drop-shadow(0 0 1rem #efbdeb) drop-shadow(0 0 2rem #efbdeb);
+  }
+  20%, 24%, 55% {
+    -webkit-filter: none;
+    filter: none;
+  }
+}
+@-webkit-keyframes textFlicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    color: white;
+    -webkit-text-stroke: 2px rgba(22, 115, 255, 0.3); /* Outer glow color and size */
+    text-shadow: 0 0 10px rgba(22, 115, 255, 0.6), 0 0 20px rgba(22, 115, 255, 0.9), 0 0 30px rgb(22, 115, 255); /* Inner glow effect */
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+    box-shadow: none;
+  }
+}
+@keyframes textFlicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    -webkit-text-stroke: 2px rgba(22, 115, 255, 0.3); /* Outer glow color and size */
+    text-shadow: 0 0 10px rgba(22, 115, 255, 0.6), 0 0 20px rgba(22, 115, 255, 0.9), 0 0 30px rgb(22, 115, 255); /* Inner glow effect */
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+    box-shadow: none;
+  }
+}
+@keyframes textFlickerPink {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    color: white;
+    -webkit-text-stroke: 2px rgba(255, 22, 224, 0.3); /* Outer glow color and size */
+    text-shadow: 0 0 10px rgba(255, 92, 247, 0.6), 0 0 20px rgba(232, 22, 255, 0.9), 0 0 30px rgb(255, 22, 197); /* Inner glow effect */
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+    box-shadow: none;
+  }
+}
+@keyframes textFlickerYellow {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    color: white;
+    -webkit-text-stroke: 2px rgba(232, 255, 22, 0.3); /* Outer glow color and size */
+    text-shadow: 0 0 10px rgba(236, 255, 92, 0.6), 0 0 20px rgba(255, 239, 22, 0.9), 0 0 30px rgb(255, 255, 22); /* Inner glow effect */
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+    box-shadow: none;
+  }
+}
+.brickWallBig2 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: url("/src/assets/images/newBricks3.png");
+  background-size: contain;
+  background-repeat: repeat;
+  box-sizing: border-box;
+  z-index: 100 !important;
+  border-radius: 20px;
+}
+.brickWallBig2 img {
+  border-radius: 50px;
+}
+@media screen and (max-width: 650px) {
+  .brickWallBig2 {
+    display: none;
+  }
+}
+
+#brickWallBGBig2 {
+  position: absolute;
+  top: 0;
+  left: 1%;
+  right: 1%;
+  bottom: 0;
+  z-index: 90 !important;
+  border-radius: 20px;
+  background-color: rgb(22, 29, 45);
+}
+@media screen and (max-width: 650px) {
+  #brickWallBGBig2 {
+    left: 0;
+    right: 0;
+    opacity: 0.5;
+  }
+}
+
+.neonBorderThin {
+  background: url("/src/assets/images/bricks.png") #6d72c3;
+  position: relative;
+  border-radius: 100px;
+  box-sizing: border-box;
+}
+.neonBorderThin:before {
+  height: 100%;
+  width: 100%;
+  content: "";
+  border: 6px solid white;
+  position: absolute;
+  z-index: 2;
+  border-radius: 100px;
+  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.5), 0px 0px 0px 6px rgba(194, 255, 175, 0.6), 0px 0px 0px 40px rgba(22, 255, 34, 0.1), 0px 0px 0px 15px rgba(22, 255, 30, 0.3), inset 0px 0px 0px 5px rgba(184, 255, 189, 0.6), inset 0px 0px 0px 12px rgba(53, 255, 46, 0.3);
+}
+.neonBorderThin img {
+  border-radius: 50px;
+}
+
+.neonText {
+  -webkit-animation: textFlicker 5s linear infinite;
+  animation: textFlicker 5s linear infinite;
+  z-index: 1000;
+  text-align: center;
+  color: white;
+}
+
+.neonBorder {
+  position: relative;
+  border-radius: 50px;
+  box-sizing: border-box;
+}
+.neonBorder:before {
+  height: 100%;
+  width: 100%;
+  content: "";
+  border: 8px solid white;
+  position: absolute;
+  z-index: 2;
+  border-radius: 50px;
+  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5), inset 0px 0px 0px 2px rgba(255, 255, 255, 0.5), 0px 0px 0px 12px rgba(175, 176, 255, 0.6), 0px 0px 0px 60px rgba(22, 34, 255, 0.1), 0px 0px 0px 30px rgba(22, 115, 255, 0.3), inset 0px 0px 0px 10px rgba(184, 208, 255, 0.6), inset 0px 0px 0px 24px rgba(46, 105, 255, 0.3);
+}
+.neonBorder img {
+  border-radius: 100px;
+}
+
+p {
+  font-family: "Neucha";
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+#headshotContainer,
+#resume-dl {
+  box-shadow: -7px 0px 10px 10px rgba(0, 0, 0, 0.3), 0px 0px 6px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+#headshotContainer,
+#resume-dl,
+p {
+  z-index: 700 !important;
+}
+
+#aboutMeLeft {
+  z-index: 600 !important;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  gap: 3rem;
+}
+@media screen and (max-width: 1000px) {
+  #aboutMeLeft {
+    flex-direction: row !important;
+    gap: 0.25rem !important;
+  }
+}
+.mobileLeft {
+  gap: 0 !important;
+}
+.mobileLeft #aboutMeH1 {
+  padding: 0 !important;
+}
+
+#aboutMeRight {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+#aboutMe {
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: 5%;
+  width: 100%;
+  box-sizing: border-box;
+}
+#aboutMe h2 {
+  font-family: "Tilt Neon";
+}
+#aboutMe #aboutMeContent {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-size: 1.5rem;
+  width: 85%;
+  gap: 1rem;
+}
+#aboutMe #aboutMeContent #aboutMeText {
+  rotate: 2deg;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  z-index: 600 !important;
+  background: linear-gradient(to right, white 0%, lightgrey 50%);
+  box-shadow: -7px 5px 10px 10px rgba(0, 0, 0, 0.3), 0px 0px 6px 3px rgba(0, 0, 0, 0.3);
+  color: black;
+  padding: 1rem;
+  position: relative;
+  font-size: 1.2rem;
+}
+#aboutMe #aboutMeContent #aboutMeText:before {
+  content: "";
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  z-index: 2000;
+  width: 10px;
+  height: 10px;
+  background: red;
+  border-radius: 50%;
+}
+#aboutMe #aboutMeContent #aboutMeText:after {
+  content: "";
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  z-index: 2000;
+  width: 10px;
+  height: 10px;
+  background: red;
+  border-radius: 50%;
+}
+#aboutMe #aboutMeContent #headshotContainer {
+  height: fit-content;
+  width: fit-content;
+  position: relative;
+  rotate: -5deg;
+}
+#aboutMe #aboutMeContent #headshotContainer:before {
+  content: "";
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  z-index: 2001;
+  width: 10px;
+  height: 10px;
+  background: red;
+  border-radius: 50%;
+}
+#aboutMe #aboutMeContent #headshotContainer:after {
+  content: "";
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  z-index: 2001;
+  width: 10px;
+  height: 10px;
+  background: red;
+  border-radius: 50%;
+}
+#aboutMe #aboutMeContent #headshot {
+  border-radius: 10px;
+  width: 225px !important;
+  height: 225px;
+  object-fit: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+  z-index: 2000;
+}
+@media screen and (max-width: 1000px) {
+  #aboutMe #aboutMeContent {
+    flex-direction: column;
+  }
+  #aboutMe #aboutMeContent #aboutMeText {
+    width: 100%;
+    margin-top: 5%;
+  }
+  #aboutMe #aboutMeContent #headshot {
+    flex-direction: row;
+  }
+  #aboutMe #aboutMeContent #headshot img {
+    height: 100%;
+  }
+}
+
+#aboutMeH1 {
+  animation: textFlickerYellow 5s linear infinite;
+  font-size: 5rem !important;
+  transform: rotate(-15deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+  text-align: center;
+  font-family: "Shorelines", cursive;
+  font-size: 3rem;
+  margin: unset;
+  position: relative;
+  white-space: nowrap;
+  z-index: 400;
+}
+@media screen and (max-width: 950px) {
+  #aboutMeH1 {
+    font-size: 3rem !important;
+  }
+}
+#aboutMeH1:before {
+  content: "";
+  position: absolute;
+  border: 8px solid rgba(255, 255, 255, 0.8);
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  z-index: -1;
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+  box-shadow: 0px 0px 4px white, inset 0px 0px 4px white, 0px 0px 50px #efbdeb, 0px 0px 30px #efbdeb, inset 0px 0px 10px #efbdeb;
+}
+@media screen and (max-width: 950px) {
+  #aboutMeH1:before {
+    border-width: 5px !important;
+    width: 150px !important;
+    height: 150px !important;
+  }
+}
+
+#resume-dl {
+  font-family: "Stint Ultra Condensed";
+  font-size: 2.2rem;
+  z-index: 700 !important;
+  transform: rotate(3deg);
+  height: 250px;
+  width: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background: linear-gradient(to left, white 0%, lightgrey 50%);
+  padding-left: 2%;
+  border-radius: 2px;
+  transition: all 0.2s ease-out;
+}
+@media screen and (max-width: 1000px) {
+  #resume-dl {
+    font-size: 1.5rem;
+    height: 200px !important;
+  }
+}
+#resume-dl a {
+  color: black !important;
+}
+#resume-dl:hover {
+  transform: scale(1.2);
+  box-shadow: none;
+}
+#resume-dl:hover:before {
+  display: none !important;
+}
+#resume-dl:before {
+  content: "";
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  width: 10px;
+  height: 10px;
+  background: red;
+  border-radius: 50%;
+}
+#resume-dl a {
+  text-decoration: none;
+  border-left: 2px solid #6d72c3;
+  padding-left: 2%;
+}
+
+.mobileRes {
+  width: 100px !important;
+  padding: 4% !important;
+  height: 80px !important;
+}
+
+/*# sourceMappingURL=AboutMe.css.map */

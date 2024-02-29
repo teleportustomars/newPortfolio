@@ -1,0 +1,89 @@
+@import "./vars/_variables.scss";
+@import "./vars/_graphics.scss";
+
+.parallax-bg {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    overflow: visible;
+    transform: translateY(calc(200vh - 750px));
+    @media screen and (max-width: 800px) {
+      transform: translateY(calc(250vh - 750px));
+      width: 100vw;
+    }
+  }
+  
+  .cityscape {
+    position: absolute;
+    width: 100%;
+    min-width: 400px;
+    height: 200vh;
+    pointer-events: none;
+    will-change: transform;
+    transition: all 0.5s ease-out;
+    overflow: visible;
+    background-repeat: repeat-x;
+  }
+  .city-scape1 {
+    background-image: url('/src/assets/cityScapes/texScape1.png');
+    @media screen and (max-width: 800px) {
+      background-size: 180% 100% !important;
+    }
+  }
+  .city-scape2 {
+    background-image: url('/src/assets/cityScapes/texScape2.png');
+    @media screen and (max-width: 800px) {
+      background-size: 160% 100% !important;
+    }
+  }
+  .city-scape3 {
+    background-image: url('/src/assets/cityScapes/texScape3.png');
+    @media screen and (max-width: 800px) {
+      background-size: 160% 100% !important;
+    }
+  }
+  
+  .cityBlock {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    justify-content: flex-start;
+    width: 100%;
+    transition: all 0.5s ease-out;
+  }
+  
+
+  .city {
+    height: 200vh;
+    width: 100%;
+    background-image:url('/src/assets/images/newCityScape.png');
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    background-repeat: no-repeat;
+    will-change: transform;
+  }
+
+  #parallaxParent {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+    transform: translateY(50vh);
+
+  } 

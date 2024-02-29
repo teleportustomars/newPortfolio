@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2&family=Tilt+Neon&display=swap");
+nav {
+  font-family: "Tilt Neon" !important;
+  z-index: 2000;
+  display: block;
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  user-select: none;
+  transform: translate3d(25px, -25px, 0);
+  transition: transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9);
+}
+nav a {
+  text-decoration: none !important;
+  color: #160141;
+}
+@media screen and (max-width: 650px) {
+  nav {
+    top: -20% !important;
+    right: -30% !important;
+  }
+}
+nav.open {
+  transform: translate3d(0, 0, 0);
+}
+nav.top-right {
+  top: -140px;
+  right: -140px;
+  pointer-events: none;
+  user-select: none;
+}
+nav.cornerNav {
+  top: -210px !important;
+  right: -210px !important;
+}
+
+.disc {
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  font: 25px "Tilt Neon", sans-serif;
+  line-height: 40px;
+  padding-top: 10px;
+  border-radius: 250px;
+  transform: scale3d(0.5, 0.5, 0.5) rotate3d(0, 0, 1, 190deg);
+  pointer-events: none;
+  opacity: 0;
+  cursor: pointer;
+  transition: transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9), opacity 0.5s;
+}
+.disc div {
+  transform: rotate(180deg);
+}
+.open .disc {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.l1 {
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: rgba(255, 255, 215, 0.3294117647);
+  transition-delay: 0s;
+}
+.open .l1 {
+  transition-delay: 0s;
+  transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 190deg);
+  opacity: 1;
+}
+.open .l1:hover {
+  background: shade(rgba(255, 255, 215, 0.3294117647), 90%);
+  color: white;
+  transition-delay: 0s;
+}
+.open .l1:active {
+  background: shade(rgba(255, 255, 215, 0.3294117647), 50%);
+  color: rgba(255, 255, 215, 0.3294117647);
+}
+.open .l1.toggle {
+  transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, 10deg);
+}
+
+.l2 {
+  top: 50px;
+  left: 50px;
+  right: 50px;
+  bottom: 50px;
+  background: rgba(230, 230, 165, 0.4635294118);
+  transition-delay: 0.1s;
+}
+.open .l2 {
+  transition-delay: 0.1s;
+  transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 190deg);
+  opacity: 1;
+}
+.open .l2:hover {
+  background: shade(rgba(230, 230, 165, 0.4635294118), 90%);
+  color: white;
+  transition-delay: 0s;
+}
+.open .l2:active {
+  background: shade(rgba(230, 230, 165, 0.4635294118), 50%);
+  color: rgba(230, 230, 165, 0.4635294118);
+}
+.open .l2.toggle {
+  transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, 10deg);
+}
+
+.l3 {
+  top: 100px;
+  left: 100px;
+  right: 100px;
+  bottom: 100px;
+  background: rgba(221, 221, 146, 0.5976470588);
+  transition-delay: 0.2s;
+}
+.open .l3 {
+  transition-delay: 0.2s;
+  transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 190deg);
+  opacity: 1;
+}
+.open .l3:hover {
+  background: shade(rgba(221, 221, 146, 0.5976470588), 90%);
+  color: white;
+  transition-delay: 0s;
+}
+.open .l3:active {
+  background: shade(rgba(221, 221, 146, 0.5976470588), 50%);
+  color: rgba(221, 221, 146, 0.5976470588);
+}
+.open .l3.toggle {
+  transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, 10deg);
+}
+
+.l4 {
+  top: 150px;
+  left: 150px;
+  right: 150px;
+  bottom: 150px;
+  background: rgba(216, 216, 135, 0.7317647059);
+  transition-delay: 0.3s;
+}
+.open .l4 {
+  transition-delay: 0.3s;
+  transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 190deg);
+  opacity: 1;
+}
+.open .l4:hover {
+  background: shade(rgba(216, 216, 135, 0.7317647059), 90%);
+  color: white;
+  transition-delay: 0s;
+}
+.open .l4:active {
+  background: shade(rgba(216, 216, 135, 0.7317647059), 50%);
+  color: rgba(216, 216, 135, 0.7317647059);
+}
+.open .l4.toggle {
+  transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, 10deg);
+}
+
+.l5 {
+  top: 200px;
+  left: 200px;
+  right: 200px;
+  bottom: 200px;
+  background: rgba(213, 213, 129, 0.8658823529);
+  transition-delay: 0.4s;
+}
+.open .l5 {
+  transition-delay: 0.4s;
+  transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 190deg);
+  opacity: 1;
+}
+.open .l5:hover {
+  background: shade(rgba(213, 213, 129, 0.8658823529), 90%);
+  color: white;
+  transition-delay: 0s;
+}
+.open .l5:active {
+  background: shade(rgba(213, 213, 129, 0.8658823529), 50%);
+  color: rgba(213, 213, 129, 0.8658823529);
+}
+.open .l5.toggle {
+  transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, 10deg);
+}
+
+.toggle {
+  line-height: 100px;
+  padding: 0;
+  width: 100px;
+  background-image: url("/src/assets/carMoon.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+  transition-delay: 0s;
+  shape-outside: circle(50%);
+  clip-path: circle(50%);
+}
+.open .toggle {
+  transform: rotate3d(0, 0, 1, 0deg);
+}
+@keyframes enter-from-right {
+  from {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+.toggle:hover {
+  background: shade(rgb(211, 211, 125), 90%);
+  text-decoration: underline;
+}
+.toggle:active {
+  background: shade(rgb(211, 211, 125), 50%);
+  color: rgba(211, 211, 125, 0.5);
+  transform: scale(0.9);
+  transition-duration: 0s;
+}
+
+/*# sourceMappingURL=moon.css.map */

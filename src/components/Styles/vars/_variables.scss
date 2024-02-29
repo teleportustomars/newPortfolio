@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Neucha&display=swap");
+
+$lightpink: #efbdeb;
+$lightblue: #6d72c3;
+$darkblue: #160141;
+$moonyellow: #fbfb98;
+$purple: #55034e;
+$midred: #993955;
+//new colors
+$mossgreen: #6c7d47;
+$applegreen: #acc12f;
+$jet: #3a3335;
+$ash: #c6d8d3;
+$blackbean: #2e0e02;
+$darkgreen: #002e2c;
+$blackolive: #423e3b;
+$chocolate: #5a2328;
+$tangerine: #f18701;
+$brightpink: #fc6471;
+$iceblue: #a9fff7;
+$seashell: #f7ebe8;
+
+
+
+  .applegreen {
+    background-color: $applegreen;
+    color: $blackolive;
+    border-color: $blackolive;
+    .h-divider {
+      background-color: $blackolive;
+    }
+    #projectStuff:before {
+      background-color: $mossgreen;
+    }
+  }
+  
+  .jet {
+    background-color: $jet;
+    #projectStuff:before {
+      background-color: $ash;
+    }
+  }
+  
+  .ash {
+    background-color: $ash;
+    color: $jet;
+    border-color: $jet;
+    .h-divider {
+      background-color: $jet;
+    }
+    #projectStuff:before {
+      background-color: $purple;
+    }
+  }
+  
+  .blackbean {
+    background-color: $blackbean;
+    #projectStuff:before {
+      background-color: $purple;
+    }
+  }
+  
+  .darkgreen {
+    background-color: $darkgreen;
+    #projectStuff:before {
+      background-color: $purple;
+    }
+  }
+  
+  .blackolive {
+    background-color: $blackolive;
+    #projectStuff:before {
+      background-color: $purple;
+    }
+  }
