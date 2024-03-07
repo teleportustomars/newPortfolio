@@ -151,6 +151,11 @@
     opacity: 0.5;
   }
 }
+@media screen and (max-width: 650px) {
+  #brickWallBGBig2 {
+    display: none;
+  }
+}
 
 .neonBorderThin {
   background: url("/src/assets/images/bricks.png") #6d72c3;
@@ -316,6 +321,7 @@ input, textarea {
   rotate: -15deg;
 }
 #contactH1:before {
+  color: white;
   content: "";
   position: absolute;
   border: 8px solid rgba(255, 255, 255, 0.8);

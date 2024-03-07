@@ -337,12 +337,16 @@
  
 //loveself
 .mossgreen {
+  .h-divider {
+    background-color: $seashell;
+  }
   background: linear-gradient(to right, $applegreen 0%, $mossgreen 100%);
   #projectStuff:before {
     background-color: $applegreen;
   #projectStuffBack:before {
     display: none !important;
   }
+
   }
 }
 
@@ -362,7 +366,7 @@
   background: linear-gradient(to bottom right, $moonyellow 0%, $tangerine 100%);
   color: $blackolive;
   .h-divider {
-    background-color: $seashell;
+    background-color: $blackolive;
   }
   #projectStuff:before {
     background-color: $brightpink;
@@ -384,6 +388,9 @@
 
 //oldSite
 .brightpink {
+  .h-divider {
+    background-color: $seashell;
+  }
     background: linear-gradient(to bottom, $lightpink 0%, $brightpink 100%);
     #projectStuff:before {
       background-color: $lightpink;

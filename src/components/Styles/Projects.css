@@ -153,6 +153,11 @@
     opacity: 0.5;
   }
 }
+@media screen and (max-width: 650px) {
+  #brickWallBGBig2 {
+    display: none;
+  }
+}
 
 .neonBorderThin {
   background: url("/src/assets/images/bricks.png") #6d72c3;
@@ -492,6 +497,9 @@
 .mossgreen {
   background: linear-gradient(to right, #acc12f 0%, #6c7d47 100%);
 }
+.mossgreen .h-divider {
+  background-color: #f7ebe8;
+}
 .mossgreen #projectStuff:before {
   background-color: #acc12f;
 }
@@ -514,7 +522,7 @@
   color: #423e3b;
 }
 .tangerine .h-divider {
-  background-color: #f7ebe8;
+  background-color: #423e3b;
 }
 .tangerine #projectStuff:before {
   background-color: #fc6471;
@@ -533,6 +541,9 @@
 
 .brightpink {
   background: linear-gradient(to bottom, #efbdeb 0%, #fc6471 100%);
+}
+.brightpink .h-divider {
+  background-color: #f7ebe8;
 }
 .brightpink #projectStuff:before {
   background-color: #efbdeb;

@@ -15,9 +15,9 @@
     justify-content: flex-end;
     align-items: flex-end;
     overflow: visible;
-    transform: translateY(calc(200vh - 750px));
+    transform: translateY(calc(200svh - 750px));
     @media screen and (max-width: 800px) {
-      transform: translateY(calc(250vh - 750px));
+      transform: translateY(calc(240svh - 750px));
       width: 100vw;
     }
   }
@@ -26,7 +26,7 @@
     position: absolute;
     width: 100%;
     min-width: 400px;
-    height: 200vh;
+    height: 200svh;
     pointer-events: none;
     will-change: transform;
     transition: all 0.5s ease-out;
@@ -34,19 +34,19 @@
     background-repeat: repeat-x;
   }
   .city-scape1 {
-    background-image: url('/src/assets/cityScapes/texScape1.png');
+    background-image: url('/src/assets/cityScapes/texScape1-min.png');
     @media screen and (max-width: 800px) {
       background-size: 180% 100% !important;
     }
   }
   .city-scape2 {
-    background-image: url('/src/assets/cityScapes/texScape2.png');
+    background-image: url('/src/assets/cityScapes/texScape2-min.png');
     @media screen and (max-width: 800px) {
       background-size: 160% 100% !important;
     }
   }
   .city-scape3 {
-    background-image: url('/src/assets/cityScapes/texScape3.png');
+    background-image: url('/src/assets/cityScapes/texScape3-min.png');
     @media screen and (max-width: 800px) {
       background-size: 160% 100% !important;
     }
@@ -64,7 +64,7 @@
   
 
   .city {
-    height: 200vh;
+    height: 200svh;
     width: 100%;
     background-image:url('/src/assets/images/newCityScape.png');
     background-size: contain;
@@ -84,6 +84,6 @@
     height: 100%;
     z-index: 2;
     pointer-events: none;
-    transform: translateY(50vh);
+    transform: translateY(50svh);
 
   } 

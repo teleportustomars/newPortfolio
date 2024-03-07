@@ -122,6 +122,7 @@ input, textarea {
     margin: unset;
     rotate: -15deg;
     &:before {
+      color: white;
       content: "";
       position: absolute;
       border: 8px solid rgba(255, 255, 255, 0.8);

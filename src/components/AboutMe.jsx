@@ -14,7 +14,7 @@ const AboutMe = ({ isMobile }) => {
           <h1 id="aboutMeH1">About Me</h1>
         </div>
         <div id="aboutMeRight">
-        <ResumeDL isMobile={isMobile} />
+          <ResumeDL isMobile={isMobile} />
 
           <div id="headshotContainer">
             <img
@@ -25,9 +25,9 @@ const AboutMe = ({ isMobile }) => {
             />
           </div>
           <p id="aboutMeText">
-            I&apos;m Matt Alexander, a web developer and designer based in
-            Philadelphia. I have a passion for creating beautiful, intuitive,
-            and performant websites and applications for a modern audience.
+            I&apos;m Matt Alexander, a concept-to-code creative designer and developer able to ideate, design, and develop your brand. I 
+            aim to work with small businesses and marginalized communities to
+            bring their passions to life in graphics and websites that are at once performant, striking, and effective.
           </p>
         </div>
       </div>

@@ -54,9 +54,9 @@ const projectsList = [
 },
 
 {
-  projectName: "second portfolio",
-  projectDescription: "my personal portfolio website",
-  projectDescShort:"old portfolio",
+  projectName: "first portfolio website",
+  projectDescription: "my first react portfolio",
+  projectDescShort:"previous portfolio",
   projectLink: "https://mattbookair.github.io/portfolio",
   projectIcon: portIcon,
   screenshot: port2,

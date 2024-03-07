@@ -152,6 +152,11 @@
     opacity: 0.5;
   }
 }
+@media screen and (max-width: 650px) {
+  #brickWallBGBig2 {
+    display: none;
+  }
+}
 
 .neonBorderThin {
   background: url("/src/assets/images/bricks.png") #6d72c3;

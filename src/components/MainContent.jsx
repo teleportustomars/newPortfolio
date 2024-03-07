@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useRef, Suspense } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./Styles/mainContent.css";
-const AboutMe = React.lazy(() => import("./AboutMe"));
-const ContactForm = React.lazy(() => import("./ContactForm"));
-const Projects = React.lazy(() => import("./Projects"));
+import AboutMe from "./AboutMe";
+import ContactForm from "./ContactForm";
+import Projects from "./Projects";
 // import PageTitle from "./PageTitle2";
 import Skills from "./Skills";
+import BackToTop from "./BackToTop";
 
 
 const MainContent = ({isMobile}) => {
@@ -41,42 +42,11 @@ const MainContent = ({isMobile}) => {
       <div id="main-content" ref={contentRef} style={mainStyles}>
         <div className="brickWallBig2"/>
         <div id="brickWallBGBig2"/> 
-        <Suspense
-          fallback={
-            <div className="fallback">
-              <h1>Loading...</h1>
-            </div>
-          }
-        >
-          <Skills />
-        </Suspense>
-        <Suspense
-          fallback={
-            <div className="fallback">
-              <h1>Loading...</h1>
-            </div>
-          }
-        >
-          <AboutMe isMobile={isMobile} />
-        </Suspense>
-        <Suspense
-          fallback={
-            <div className="fallback">
-              <h1>Loading...</h1>
-            </div>
-          }
-        >
-          <Projects isMobile={isMobile} />
-        </Suspense>
-        <Suspense
-          fallback={
-            <div className="fallback">
-              <h1>Loading...</h1>
-            </div>
-          }
-        >
-          <ContactForm />
-        </Suspense>
+        <Skills />
+        <AboutMe isMobile={isMobile} />
+        <Projects isMobile={isMobile} />
+        <ContactForm />
+        <BackToTop />
       </div>
     </>
   );

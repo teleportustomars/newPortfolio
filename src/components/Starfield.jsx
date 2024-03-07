@@ -1,8 +1,10 @@
-import { useState, useEffect, useRef, useCallback, useContext } from "react";
+/* eslint-disable react/prop-types */
+import { useState, useEffect, useRef, useCallback } from "react";
 import { QuadtreeNode } from "./QuadtreeNode.js";
 import { Point } from "./Point.js";
 import { Star } from "./Star.jsx";
 import "./styles/Starfield.css"
+import Plane from "./Plane.jsx";
 
 // Starfield component
 const Starfield = ({isMobile}) => {
@@ -59,19 +61,16 @@ const Starfield = ({isMobile}) => {
     setQuadTree(quadtree);
     const handleResize = () => {
       if(!isMobile){
-        requestAnimationFrame(updateStarfield);
-        }
+        updateStarfield();
+      }
     };
 
-    // Attach the resize event listener
     window.addEventListener("resize", handleResize);
 
-    // Detach the event listener when the component is unmounted
     return () => {
       window.removeEventListener("resize", handleResize);
     };
 
-    // console.table(quadtree);
   }, [updateStarfield]);
 
   useEffect(() => {
@@ -79,9 +78,6 @@ const Starfield = ({isMobile}) => {
     const handleMouseMove = (e) => {
       const mouseX = e.clientX;
       const mouseY = e.clientY;
-  
-      // Check if the user has scrolled down
-      // const isScrolledDown = window.scrollY > 0;
   
       if (mouseX && !isMobile) {
         let starIDs = quadTree.queryPointsInRange(mouseX, mouseY, 100);
@@ -109,26 +105,9 @@ const Starfield = ({isMobile}) => {
     const addMouseMoveListener = () => {
       window.addEventListener("mousemove", handleMouseMove);
     };
-  
-    // Attach the mousemove event listener initially
-    addMouseMoveListener();
-  
-    // Remove the event listener when the user scrolls down
-    // const handleScroll = () => {
-    //   if (window.scrollY > 0) {
-    //     window.removeEventListener("mousemove", handleMouseMove);
-    //   } else {
-    //     addMouseMoveListener();
-    //   }
-    // };
-  
-    // Attach the scroll event listener
-    // window.addEventListener("scroll", handleScroll);
-  
-    // Detach the event listeners when the component is unmounted
+      addMouseMoveListener();
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
-      // window.removeEventListener("scroll", handleScroll);
     };
   
   }, [stars, quadTree]);
@@ -137,12 +116,8 @@ const Starfield = ({isMobile}) => {
     <div
       className="starfield"
       ref={starfieldRef}
-      // style={{
-      //   width: "100vw",
-      //   height: "100vh",
-      //   zIndex: -1,
-      // }}
     >
+      <Plane />
       {stars.map((star, index) => (
         <Star
           key={index}

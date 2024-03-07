@@ -153,6 +153,11 @@
     opacity: 0.5;
   }
 }
+@media screen and (max-width: 650px) {
+  #brickWallBGBig2 {
+    display: none;
+  }
+}
 
 .neonBorderThin {
   background: url("/src/assets/images/bricks.png") #6d72c3;
@@ -216,7 +221,7 @@
   font-family: "Shorelines", cursive;
   margin: unset;
   animation: textFlicker 5s linear infinite;
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: #f7ebe8;
 }
 #pageTitle h2 {

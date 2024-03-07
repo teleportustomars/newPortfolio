@@ -26,3 +26,24 @@
       transition: box-shadow 0.1s ease-in-out;
     }
   }
+
+.plane {
+  position: absolute;
+  width: 50px;
+  height: 22px;
+  background-image: url('src/assets/cityScapes/plane.png');
+  background-size: 100% 100%;
+  animation: planeFly 10s linear infinite;
+  top: 10%;
+  z-index: 10000; 
+}
+
+
+@keyframes planeFly {
+  0% {
+    transform: translateX(-10vw);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}

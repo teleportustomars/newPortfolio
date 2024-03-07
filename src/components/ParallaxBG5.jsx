@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import React, { useEffect, useState, useCallback, useMemo } from "react";
-import cityScape from "../assets/cityScape3-1.png";
 import "./Styles/ParallaxBG.css";
 
 const debounce = (func, delay) => {
@@ -50,7 +49,7 @@ const ParallaxBG = ({isMobile}) => {
     parallaxMultiplier,
   }) {
     const parallaxRate = useMemo(() => {
-      const screenPortion = 0.3;
+      const screenPortion = 0.1;
       const vpHeight = window.innerHeight;
       const docHeight = document.documentElement.scrollHeight;
       const scrollableHeight = docHeight - vpHeight;
@@ -80,7 +79,6 @@ const ParallaxBG = ({isMobile}) => {
         color="#472047"
         cityHeight={400}
         numberOfCities={2}
-        cityLayer={cityScape}
         parallaxMultiplier={1.5}
       />
       <CityScape
@@ -89,7 +87,6 @@ const ParallaxBG = ({isMobile}) => {
         color="#673d67"
         cityHeight={300}
         numberOfCities={2}
-        cityLayer={cityScape}
         parallaxMultiplier={2}
       />
       <CityScape
@@ -98,18 +95,24 @@ const ParallaxBG = ({isMobile}) => {
         color="#784d78"
         cityHeight={200}
         numberOfCities={3}
-        cityLayer={cityScape}
         parallaxMultiplier={3}
       />
-      <CityScape
+      {/* <CityScape
         cityClass="city-scape4"
         zIndex={0}
         color="#836683"
         cityHeight={100}
         numberOfCities={4}
-        cityLayer={cityScape}
         parallaxMultiplier={4}
-      />
+      /> */}
+      {/* <CityScape
+        cityClass="city-scape5"
+        zIndex={-1}
+        color="#836683"
+        cityHeight={100}
+        numberOfCities={5}
+        parallaxMultiplier={4}
+      /> */}
     </div>
   );
 };
