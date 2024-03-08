@@ -1,16 +1,15 @@
 import "./App.css";
-// import "./components/Styles/Graphics.css"
 import { useEffect, useState } from "react";
-import ParallaxBG from "./components/ParallaxBG5.jsx";
-import Starfield from "./components/Starfield.jsx";
-import MainContent from "./components/MainContent.jsx";
-import PageTitle from "./components/PageTitle.jsx";
-import Moon from "./components/Moon.jsx";
+import ParallaxBG from "./components/parallax-bg/ParallaxBG.jsx";
+import Starfield from "./components/starfield/Starfield.jsx";
+import MainContent from "./components/main-content-layout/MainContent.jsx";
+import PageTitle from "./components/site-title/PageTitle.jsx";
+import Moon from "./components/moon-nav/Moon.jsx";
 import { isMobile } from "react-device-detect";
 
 function App() {
 
-
+  //set up window size and mobile detection
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   const appWidthName = () => {
@@ -31,13 +30,9 @@ function App() {
     });
   }, []);
 
-  // useEffect(() => {
-  //   console.log("screenWidth is " + screenWidth + "px");
-  // }, [screenWidth]);
 
   return (
     <div className={`App ${appWidthName()}`}>
-      {/* <div id="brickWallBGBig"/> */}
       <PageTitle />
       <MainContent isMobile={isMobile} />
       <Moon screenWidth={screenWidth} />

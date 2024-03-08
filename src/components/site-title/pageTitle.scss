@@ -1,0 +1,48 @@
+#pageTitle {
+    padding: 2%;
+    background: none !important;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-end;
+    align-content: center;
+    gap: 1rem;
+    z-index: 1000;
+    pointer-events: none;
+    user-select: none;
+    h1 {
+      font-family: "Shorelines", cursive;
+      margin: unset;
+      animation: textFlicker 5s linear infinite;
+      font-size: 3.5rem;
+      color: $seashell;
+    }
+    h2 {
+      font-family: "Neucha", cursive;
+      color: $seashell;
+    }
+  }
+  
+
+  #downArrow {
+    background-image: url('/src/assets/ui-elements/downArrow3.svg/');
+    width: 70px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    filter: drop-shadow(0 0 1rem $lightblue) drop-shadow(0 0 .5rem $lightblue) drop-shadow(0 0 1rem $lightblue);
+    animation: bob 1.5s ease-in-out infinite;
+  }
+
+  @keyframes bob {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }

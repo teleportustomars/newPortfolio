@@ -1,73 +1,20 @@
-@import "./components/Styles/vars/_variables.scss";
-@import "./components/Styles/vars/_graphics.scss";
+@import "./components/styles/abstracts/_variables.scss";
+@import "./components/styles/abstracts/_graphics.scss";
+@import "./components/styles/abstracts/_resets.scss";
+
 @import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Expletus+Sans:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Neonderthaw&family=Tilt+Neon&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
+
+
+
 @font-face {
   font-family: "Shorelines";
   src: url("/src/assets/fonts/Shorelines Script Bold.otf") format("opentype");
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-* {
-  margin: 0;
-}
-
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-  min-width: 320px;
-
-}
-/*
-  5. Improve media defaults
-*/
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-/*
-  6. Remove built-in form typography styles
-*/
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-/*
-  7. Avoid text overflows
-*/
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
-
-#root,
-#__next {
-  isolation: isolate;
-}
 
 body {
   margin: 0;
@@ -101,18 +48,6 @@ body {
   font-size: calc(15px + 0.390625vw);
 }
 
-#pageTitle {
-  padding: 10px;
-  h1 {
-    font-family: "Shorelines", cursive;
-    margin: unset;
-    animation: textFlicker 5s linear infinite;
-    font-size: 3rem;
-  }
-  h2 {
-    font-family: "Tilt Neon";
-  }
-}
 
 .sectionWrapper {
   display: flex;
@@ -143,4 +78,12 @@ body {
   overflow-x: hidden !important;
 }
 
-
+@import "./components/about-me/AboutMe.scss";
+@import "./components/contact-form/Contact.scss";
+@import "./components/main-content-layout/mainContent.scss";
+@import "./components/moon-nav/moon.scss";
+@import "./components/parallax-bg/ParallaxBG.scss";
+@import "./components/projects/Projects.scss";
+@import "./components/site-title/pageTitle.scss";
+@import "./components/starfield/Starfield.scss";
+@import "./components/skills/Skills.scss";

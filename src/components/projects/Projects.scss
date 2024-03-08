@@ -1,0 +1,397 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Stint+Ultra+Condensed&display=swap');
+
+
+
+#project-instructions {
+  font-family: "Tilt Neon" !important;
+  rotate: -15deg;
+  text-align: center;
+  font-size: 1.5rem;
+  position: relative;
+  animation: textFlickerPink 7s linear infinite;
+}
+
+#project-header {
+  font-size: 5rem !important;
+  // transform: rotate(-1deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+  text-align: center;
+  font-family: "Shorelines", cursive;
+  font-size: 3rem;
+  margin: unset;
+  position: relative;
+  rotate: -15deg;
+  // z-index: 9999;
+  // white-space: nowrap;
+  -webkit-animation: textFlickerPink 5s linear infinite;
+          animation: textFlickerPink 5s linear infinite;
+
+  @media (max-width: 650px) {
+    font-size: 3rem !important;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    border: 8px solid rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    z-index: -1;
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    box-shadow: 0px 0px 4px white, inset 0px 0px 4px white,
+      0px 0px 50px $lightpink, 0px 0px 30px $lightpink,
+      inset 0px 0px 10px $lightpink;
+    @media (max-width: 650px) {
+      height: 150px !important;
+      width: 150px !important;
+      border-width: 5px !important;
+    }
+  }
+}
+
+#projectsParent {
+  position: relative;
+  margin: auto;
+  z-index: 1000;
+  width: 100%;
+  // width: 1580px;
+}
+
+#project-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  margin: auto;
+  flex-wrap: wrap;
+  overflow: visible;
+  gap: .5rem;
+  padding: 1%;
+
+  @media screen and (max-width: 800px) {
+    flex-direction: column !important;
+  }
+  #indivProject {
+    z-index: 2000;
+    overflow: visible;
+    min-width: 300px;
+    max-width: 300px;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    h2 {
+      font-family: "Stint Ultra Condensed";
+      // color: $moonyellow;
+      font-size: 2rem;
+    }
+
+    #content {
+      position: relative;
+      display: flex;
+      box-sizing: border-box;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      gap: 1rem;
+      font-size: 1rem;
+      text-align: center;
+      height: 100%;
+      // background: black;
+      border-radius: 30px;
+      position: relative;
+      overflow: visible;
+
+      #screenShot {
+        opacity: 1 !important;
+        border-radius: 3px;
+        // border: 3px solid black;
+        // transform: rotate(random(5) + deg);
+        z-index: 300;
+        width: 100%;
+        min-height: 80%;
+        position: relative;
+        -o-object-fit: cover;
+           object-fit: cover;
+        -o-object-position: top left;
+           object-position: top left;
+        // border-radius: 30px 30px 0 0;
+        img {
+          image-rendering: crisp-edges;
+        }
+      }
+    }
+
+    #projectStuff {
+      height: 20%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-content: center;
+      flex-wrap: nowrap;
+      align-items: center;
+      margin: auto;    
+      border: none;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+      // overflow: hidden;
+      .h-divider {
+        height: 1px;
+        width: 15%;      }
+    }
+    #projectStuffBack {
+    }
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  cursor: pointer !important;
+
+}
+
+.flip-card {
+  perspective: 2000px;
+  will-change: transform;
+  border-radius: 5px;
+  width: 250px;
+  height: 350px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all .2s ease-out;
+  z-index: 1000 !important;
+}
+
+.flip-card.flipped {
+  transform: rotateY(170deg) rotateX(15deg) rotateZ(2deg) scale(1.2);
+}
+
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.flip-card-front,
+.flip-card-back {
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  text-shadow: .7px .7px 0px rgba(0,0,0,0.4);
+
+}
+
+.flip-card-front {
+  // background-color: $darkblue;
+  box-shadow: 14px 7px 30px 2px rgba(0,0,0,0.3), 2px 2px 10px 3px rgba(0,0,0,0.3);
+  // border-top: 1px solid rgba(255, 255, 255, 0.3);
+  // border-left: 1px solid rgba(255, 255, 255, 0.3);
+  // color: white;
+        &:before {
+        content: "";
+        position: absolute;
+        top: 2%;
+        right: 2%;
+        z-index: 2000;
+        width: 10px;
+        height: 10px;
+        background: red;
+        border-radius: 50%;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        top: 2%;
+        left: 2%;
+        z-index: 2000;
+        width: 10px;
+        height: 10px;
+        background: red;
+        border-radius: 50%;
+      }
+}
+
+.flip-card-back {
+  // background-color: $midred;
+  transform: rotateY(180deg) translateZ(1px); /* Adjust the translateZ value as needed */
+  box-shadow: inset 0px 0px 12px 5px $lightpink, inset 0px 0px 4px 4px rgba(255, 255, 255, 0.3) !important;
+  border-radius: 5px;
+  p {
+    font-family: "Neucha", cursive;
+    font-size: 1.2rem;
+    padding: 0%;
+  }
+  #projectLinkText {
+    font-family: "Neucha", cursive;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 8%;
+    left: 5%;
+    rotate: -30deg;
+    opacity: 0.8;
+  }
+
+  #skillsAndIcon {
+
+  }  
+
+  #projIcon {
+    width: 50%;
+    opacity: 0.8;
+    rotate: -20deg;
+    position: absolute;
+    bottom: -7%;
+    right: -5%;
+  }
+
+  ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 80%;
+    // color: white;
+    font-family: "Neucha", cursive;
+  }
+
+  overflow: hidden;
+  position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        background-color: lightgrey;
+        mix-blend-mode: multiply;
+        opacity: 0.7;
+        border-radius: 50%;
+        $pValue: -3%;
+        top: $pValue;
+        left: $pValue;
+        right: $pValue;
+        bottom: $pValue;
+        z-index: -1;
+        rotate: 20deg;
+      }
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 1rem;
+  height: 100%;
+  padding: 5px;
+  text-align: center;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.divider {
+  width: 80%;
+  height: 1px;
+  background-color: $seashell;
+  padding: 0;
+  opacity: 0.5;
+}
+
+#skillList {
+  position: relative;
+  // &:before {
+  //   content: "";
+  //   position: absolute;
+  //   transform: rotate(-7deg);
+  //   z-index: 100;
+  //   top: 15%;
+  //   left: 15%;
+  //   bottom: 15%;
+  //   right: 15%;
+  //   border-radius: 50%;
+  //   display: flex;
+  //   justify-content: center;
+  //   // background-color: grey;
+  // }
+}
+ 
+//loveself
+.mossgreen {
+  .h-divider {
+    background-color: $seashell;
+  }
+  background: linear-gradient(to right, $applegreen 0%, $mossgreen 100%);
+  #projectStuff:before {
+    background-color: $applegreen;
+  #projectStuffBack:before {
+    display: none !important;
+  }
+
+  }
+}
+
+//joshsite
+.chocolate {
+  background: linear-gradient(to bottom right, $midred 0%, $chocolate 100%);
+  #projectStuff:before {
+    background-color: $midred;
+  }
+  .h-divider {
+    background-color: $ash;
+  }
+}
+
+//clickbait
+.tangerine {
+  background: linear-gradient(to bottom right, $moonyellow 0%, $tangerine 100%);
+  color: $blackolive;
+  .h-divider {
+    background-color: $blackolive;
+  }
+  #projectStuff:before {
+    background-color: $brightpink;
+  }
+}
+
+//orfu
+.iceblue {
+  background: linear-gradient(to bottom left, $iceblue 0%, $lightblue 100%);
+  // $iceblue;
+  color: $blackolive;
+  .h-divider {
+    background-color: $blackolive;
+  }
+  #projectStuff:before {
+    background-color: $lightblue;
+  }
+}
+
+//oldSite
+.brightpink {
+  .h-divider {
+    background-color: $seashell;
+  }
+    background: linear-gradient(to bottom, $lightpink 0%, $brightpink 100%);
+    #projectStuff:before {
+      background-color: $lightpink;
+    }
+  }

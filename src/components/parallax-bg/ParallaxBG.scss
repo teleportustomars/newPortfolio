@@ -1,0 +1,74 @@
+.parallax-bg {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    overflow: visible;
+    transform: translateY(calc(200svh - 750px));
+    @media screen and (max-width: 800px) {
+      transform: translateY(calc(240svh - 750px));
+      width: 100vw;
+    }
+  }
+  
+  .cityscape {
+    position: absolute;
+    width: 100%;
+    min-width: 400px;
+    height: 200svh;
+    pointer-events: none;
+    will-change: transform;
+    transition: all 0.5s ease-out;
+    overflow: visible;
+    background-repeat: repeat-x;
+  }
+  
+  .cityBlock {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    justify-content: flex-start;
+    width: 100%;
+    transition: all 0.5s ease-out;
+  }
+
+  #parallaxParent {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+    transform: translateY(50svh);
+  } 
+
+  .city-scape1 {
+    background-image: url('/src/assets/ui-elements/cityScapes/texScape1-min.png');
+    @media screen and (max-width: 800px) {
+      background-size: 180% 100% !important;
+    }
+  }
+  .city-scape2 {
+    background-image: url('/src/assets/ui-elements/cityScapes/texScape2-min.png');
+    @media screen and (max-width: 800px) {
+      background-size: 160% 100% !important;
+    }
+  }
+  .city-scape3 {
+    background-image: url('/src/assets/ui-elements/cityScapes/texScape3-min.png');
+    @media screen and (max-width: 800px) {
+      background-size: 160% 100% !important;
+    }
+  }
