@@ -1,11 +1,9 @@
-import React from 'react';
-import { Link, animateScroll as scroll } from 'react-scroll';
+import { Link } from 'react-scroll';
 
 const BackToTop = () => {
 
     return (
         <div id="backToTop">
-            <div id="upArrow" />
             <Link
                 id="arrowText"
                 to="root"
@@ -13,7 +11,8 @@ const BackToTop = () => {
                 smooth={true}
                 duration={500}
             >
-                top
+            <div id="upArrow" />
+                <span id="topText">top</span>
             </Link>
         </div>
     );
