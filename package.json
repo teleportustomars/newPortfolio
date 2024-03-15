@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://teleportustomars.github.io/newPortfolio/",
+  "homepage": "https://mattjalexander.dev",
   "base":"./",
   "scripts": {
     "dev": "vite",
