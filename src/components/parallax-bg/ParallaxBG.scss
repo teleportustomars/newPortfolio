@@ -55,20 +55,20 @@
   } 
 
   .city-scape1 {
-    background-image: url('/src/assets/ui-elements/cityScapes/texScape1-min.png');
+    background-image: url('/src/assets/ui-elements/cityScapes/texScape1-min-cropped.png');
     @media screen and (max-width: 800px) {
-      background-size: 180% 100% !important;
+      background-size: 200% 50% !important;
     }
   }
   .city-scape2 {
-    background-image: url('/src/assets/ui-elements/cityScapes/texScape2-min.png');
+    background-image: url('/src/assets/ui-elements/cityScapes/texScape2-min-cropped.png');
     @media screen and (max-width: 800px) {
-      background-size: 160% 100% !important;
+      background-size: 200% 50% !important;
     }
   }
   .city-scape3 {
-    background-image: url('/src/assets/ui-elements/cityScapes/texScape3-min.png');
+    background-image: url('/src/assets/ui-elements/cityScapes/texScape3-min-cropped.png');
     @media screen and (max-width: 800px) {
-      background-size: 160% 100% !important;
+      background-size: 200% 50% !important;
     }
   }

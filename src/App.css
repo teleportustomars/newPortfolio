@@ -315,7 +315,7 @@ body {
 }
 
 .sectionWrapper {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -630,6 +630,7 @@ input, textarea {
   justify-content: center;
   align-items: center;
   padding: 2%;
+  margin-bottom: 5%;
 }
 @media screen and (max-width: 650px) {
   #contactParent {
@@ -656,7 +657,7 @@ input, textarea {
 @media screen and (max-width: 650px) {
   #contactForm {
     width: 80% !important;
-    margin-top: 5% !important;
+    margin-top: 5rem !important;
   }
 }
 #contactForm * {
@@ -756,7 +757,6 @@ input, textarea {
   align-items: center;
   align-content: center;
   flex-direction: column;
-  gap: 10rem;
   position: relative;
   padding-bottom: 5%;
   filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.2));
@@ -764,6 +764,7 @@ input, textarea {
 @media screen and (max-width: 650px) {
   #main-content {
     padding-bottom: 15% !important;
+    gap: 5rem;
   }
 }
 
@@ -827,6 +828,41 @@ input, textarea {
 .fallback {
   display: flex;
   justify-content: center;
+}
+
+.neonDividerParent {
+  margin: 8% auto;
+  width: 50%;
+  height: 50px;
+  z-index: 9999;
+  position: relative;
+  filter: drop-shadow(0 0 0.5rem #fff) drop-shadow(0 0 2rem #6d72c3) drop-shadow(0 0 1rem #6d72c3);
+}
+@media screen and (max-width: 650px) {
+  .neonDividerParent {
+    display: none;
+  }
+}
+.neonDividerParent .neonDivider {
+  width: 100%;
+  height: 100%;
+  background: white;
+  --mask: radial-gradient(
+        53.83px at 50% calc(100% + 28px),
+        #0000 calc(99% - 10px),
+        #000 calc(101% - 10px) 99%,
+        #0000 101%
+      )
+      calc(50% - 80px) calc(50% - 25px + 0.5px) / 160px 50px repeat-x,
+    radial-gradient(
+        53.83px at 50% -28px,
+        #0000 calc(99% - 10px),
+        #000 calc(101% - 10px) 99%,
+        #0000 101%
+      )
+      50% calc(50% + 25px) / 160px 50px repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
 }
 
 nav {
@@ -1115,29 +1151,29 @@ nav.cornerNav {
 }
 
 .city-scape1 {
-  background-image: url("/src/assets/ui-elements/cityScapes/texScape1-min.png");
+  background-image: url("/src/assets/ui-elements/cityScapes/texScape1-min-cropped.png");
 }
 @media screen and (max-width: 800px) {
   .city-scape1 {
-    background-size: 180% 100% !important;
+    background-size: 200% 50% !important;
   }
 }
 
 .city-scape2 {
-  background-image: url("/src/assets/ui-elements/cityScapes/texScape2-min.png");
+  background-image: url("/src/assets/ui-elements/cityScapes/texScape2-min-cropped.png");
 }
 @media screen and (max-width: 800px) {
   .city-scape2 {
-    background-size: 160% 100% !important;
+    background-size: 200% 50% !important;
   }
 }
 
 .city-scape3 {
-  background-image: url("/src/assets/ui-elements/cityScapes/texScape3-min.png");
+  background-image: url("/src/assets/ui-elements/cityScapes/texScape3-min-cropped.png");
 }
 @media screen and (max-width: 800px) {
   .city-scape3 {
-    background-size: 160% 100% !important;
+    background-size: 200% 50% !important;
   }
 }
 

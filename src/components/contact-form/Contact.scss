@@ -28,6 +28,7 @@ input, textarea {
   justify-content: center;
   align-items: center;
   padding: 2%;
+  margin-bottom: 5%;
   @media screen and (max-width: 650px) {
     flex-direction: column !important;
   }
@@ -36,7 +37,7 @@ input, textarea {
 #contactForm {
     @media screen and (max-width: 650px) {
       width: 80% !important;
-      margin-top: 5% !important;
+      margin-top: 5rem !important;
     }
     width: 50%;
     border-radius: 7.5px;
