@@ -1,0 +1,69 @@
+Matthew Alexander
+mattjalexander.dev | 267-393-3309 | mattalexander.portfolio@gmail.com | linkedin.com/in/mattalexander240
+
+Professional Summary
+Infinitely curious, forward-thinking React Designer and Developer with a record of visually striking solutions. Self-taught with the passion and ability to create anything with any level of software: can wireframe and prototype whether in Adobe CC, Figma, or Balsamiq; can create and deploy websites whether with WordPress, pre-existing templates, or Javascript. No matter the challenge, I employ skills both new and old to meet it.
+
+Education
+Bachelor of Arts in Business, Marketing Concentration, French Minor, Summa Cum Laude
+Arcadia University, Glenside, PA
+Aug. 2012 -- May 2016
+Experience
+
+Front-end Designer and Developer
+Self-employed, Philadelphia, PA
+Jan 2020 -- Present
+Developed and designed full-stack WordPress and React pages for entities around Philadelphia, ranging from individuals to small businesses and research groups.
+Created dozens of custom, high-quality, unique graphic designs and illustrations with Adobe Creative Suite to create one-of-a-kind pages.
+Placed a heavy emphasis on both front- and back-end usability, with repeat clients citing ease of maintenance.
+
+CRM Specialist I
+Finance of America Companies, Conshohocken, PA
+Jan 2021 -- Jan 2022
+Coded over 2 years' worth of HTML documents in TotalExpert's marketing collateral backend, building, assigning, and scheduling hundreds of emails, social media posts, and print pieces, contributing to the successful execution of 20 unique FoA campaigns.
+Helped develop email Journeys that were used by hundreds of Loan Officers across the country, increasing email engagement by an additional 20%.
+Closed thousands of ServiceNow tickets for Loan Officers having issues with collateral and email templates.
+
+Web Developer and Art Director
+Our Recipe for Unity, Easton, PA
+June 2016 -- Dec 2019
+Formulated core business concepts and branding that brought startup nonprofit to life.
+Built the nonprofit's custom website in WordPress on a small budget, ensuring a high-quality online presence that garnered 1,000 pageviews in the website's first month alone.
+Designed, created, and posted core content and materials using Adobe PhotoShop, Illustrator, and InDesign, producing visually appealing and effective marketing collateral that was downloaded thousands of times in the nonprofit's lifespan.
+
+Projects
+Current Portfolio | mattalexander.dev
+Dec 2023 -- Feb 2024
+Custom cityscape backgrounds designed with Procreate and Adobe Creative Suite, website prototyped in Apple Keynote and Figma.
+Built with Vite and ReactJS; performance optimized with quadtrees and memoization enabling over 5 layers of detailed visual effects.
+Styles and custom animations done with SASS, hosted on Github Pages.
+
+clickbAIt | itch.io
+Oct 2022 -- Mar 2023
+Prototyped with Procreate, Vectornator, Apple Keynote.
+Built with Create-React-App, ReactJS, NodeJS, ExpressJS, Vanilla CSS, two AI-based APIs, socket.io, PM2, Nginx, itch.io, and DigitalOcean.
+Over a thousand unique users--an over 3% CTR--have enjoyed clickbAIt in the year since release, and the game has been added to dozens of users’ collections.
+
+Commissioned Portfolio | joshwolper.github.io
+Sep 2022 -- Oct 2022
+Built and maintained with Vite, ReactJS, SASS, GitHub Pages.
+Custom built components allow users to performantly interact with dozens of full-size images and gifs.
+Launch of new site and custom marketing materials garnered client 5 job offers in a month.
+
+LoveSelf | teleportustomars.github.io/LoveSelf
+Oct 2023
+Unique design features illustrations handmade with Adobe CC and Procreate.
+Built with Vite, ReactJS, SASS.
+Demo hosted on GitHub Pages while idea is on hiatus.
+
+SecondHome (in progress)
+May 2023
+Social site for sharing virtual/video game homes and bases.
+Will be a one-of-a-kind space for users to focus on and share their creativity in video games.
+Being built with Vite, ReactJS, SASS, MongoDB, NodeJS, Express, DigitalOcean, release date TBD.
+
+Previous Portfolio | mattbookair.github.io/Portfolio
+May 2023
+
+Handmade card and monster animations designed with Procreate, Vectornator, and Apple Keynote.
+Built with Vite, ReactJS, hosted on GitHub Pages.

@@ -4,6 +4,7 @@ import ContactForm from "/src/components/contact-form/ContactForm";
 import Projects from "/src/components/projects/Projects";
 import Skills from "/src/components/skills/Skills";
 import BackToTop from "/src/components/main-content-layout/BackToTop.jsx";
+import Title from "/src/components/titles/Titles.jsx";
 
 //define main layout
 const MainContent = ({ isMobile }) => {
@@ -17,17 +18,25 @@ const MainContent = ({ isMobile }) => {
     );
   };
 
+  // const Divider = () => {
+  //   return (
+  //   <div className="neonDividerParent2">
+  //   /  
+  //   </div>
+  //   );
+  // };
+
   return (
     <>
       <div id="main-content" ref={contentRef}>
         <div className="brickWallBig2" />
         <div id="brickWallBGBig2" />
         <Skills />
-        <AboutMe isMobile={isMobile} />
+        <AboutMe isMobile={isMobile} Title={Title} />
         <Divider />
-        <Projects isMobile={isMobile} />
+        <Projects isMobile={isMobile} Title={Title} />
         <Divider />
-        <ContactForm />
+        <ContactForm isMobile={isMobile} Title={Title} />
         <BackToTop />
       </div>
     </>

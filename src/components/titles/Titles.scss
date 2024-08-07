@@ -1,0 +1,100 @@
+@keyframes newFlicker {
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    opacity: 1;
+  }
+
+  20%,
+  24%,
+  55% {
+    opacity: 0;
+  }
+}
+
+.sectionTitle {
+  text-align: center !important;
+  font-family: "Shorelines", cursive;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: unset;
+  overflow: visible;
+  opacity: 0.5;
+  color: white !important;
+  font-size: 5rem;
+  white-space: nowrap;
+}
+
+.rotate {
+  rotate: -15deg;
+}
+
+.titleGlow {
+  color: white;
+  overflow: visible;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  right: 0;
+  bottom: -100%;
+  animation: newFlicker 5s linear infinite;
+}
+
+#titleParent {
+  position: relative;
+  z-index: 9999;
+}
+
+.mainGlow {
+  background-position: center center;
+  background: radial-gradient(
+    ellipse at center,
+    #fbfb988a 0%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  -webkit-text-stroke: 2px #fbfb98b5; /* Outer glow color and size */
+  text-shadow: 0 0 10px #fbfb98a4,
+    0 0 20px $moonyellow, 0 0 30px $moonyellow;
+}
+
+.primaryGlow {
+  background-position: center center;
+  background: radial-gradient(
+    ellipse at center,
+    #efbdeb8c 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  -webkit-text-stroke: 2px #efbdeb8c; /* Outer glow color and size */
+  text-shadow: 0 0 10px $lightpink,
+    0 0 20px $lightpink, 0 0 30px $lightpink;
+}
+
+.secondaryGlow {
+  background: radial-gradient(
+    ellipse at center,
+    #abc12fa9 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  -webkit-text-stroke: 2px #abc12f7b; /* Outer glow color and size */
+  text-shadow: 0 0 10px $applegreen,
+    0 0 20px $applegreen, 0 0 30px $applegreen;
+}
+
+.tertiaryGlow {
+  background: radial-gradient(
+    ellipse at center,
+    #a9fff68e 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  -webkit-text-stroke: 2px #a9fff692; /* Outer glow color and size */
+  text-shadow: 0 0 10px rgba(22, 115, 255, 0.6),
+    0 0 20px $iceblue, 0 0 30px $iceblue;
+}

@@ -4,7 +4,7 @@ import { QuadtreeNode } from "./QuadtreeNode.js"; //base *class*
 import { Point } from "./Point.js"; //point *class*
 import { Star } from "./Star.jsx"; //star *component*
 
-const Starfield = ({isMobile}) => {
+const Starfield = ({isMobile, screenSize}) => {
 
   const starfieldRef = useRef(null);
   const [stars, setStars] = useState([]);
@@ -24,12 +24,12 @@ const Starfield = ({isMobile}) => {
     return generatedStars;
   };
 
-  const starCount = 750; //number of stars total
+  const starCount = 1750; //number of stars total
 
   //regenerate starfield
   const updateStarfield = useCallback(() => {
-    const canvasWidth = window.innerWidth;
-    const canvasHeight = window.innerHeight;
+    const canvasWidth = screenSize.width;
+    const canvasHeight = screenSize.height;
     const quadtree = new QuadtreeNode(0, 0, canvasWidth, canvasHeight);
 
     // Generate and insert random points into the quadtree
@@ -41,7 +41,7 @@ const Starfield = ({isMobile}) => {
     );
     setStars(generatedStars);
     setQuadTree(quadtree);
-  }, [starCount]);
+  }, [starCount, screenSize]);
 
   //regenerate starfield on resize
   useEffect(() => {
@@ -70,7 +70,7 @@ const Starfield = ({isMobile}) => {
       window.removeEventListener("resize", handleResize);
     };
 
-  }, [updateStarfield]);
+  }, [updateStarfield, screenSize]);
 
   //make stars glow when user hovers over them
   useEffect(() => {
@@ -111,7 +111,7 @@ const Starfield = ({isMobile}) => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
   
-  }, [stars, quadTree]);
+  }, [stars, quadTree, screenSize]);
 
   return (
     <div

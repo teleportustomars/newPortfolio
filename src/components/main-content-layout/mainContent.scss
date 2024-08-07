@@ -4,7 +4,7 @@
   min-width: 320px;
   max-width: 1000px;
   width: 100%;
-  margin: 5% auto;
+  margin: 60rem 5% auto 5%;
   // padding-bottom: 5%;
   // margin-bottom: 500px;
   height: auto;
@@ -22,6 +22,7 @@
     padding-bottom: 15% !important;
     gap: 5rem;
   }
+   opacity: .1;
 }
 
 #backToTop {
@@ -100,11 +101,11 @@
   height: 50px;
   z-index: 9999;
   position: relative;
-  filter: drop-shadow(0 0 .5rem #fff) drop-shadow(0 0 2rem $lightblue) drop-shadow(
-      0 0 1rem $lightblue
-  );
+  filter: drop-shadow(0 0 .5rem $tangerine) drop-shadow(0 0 2rem $tangerine) drop-shadow(
+      0 0 1rem $tangerine);
   .neonDivider {
     width: 100%;
+    border-radius: 100px;
     height: 100%;
     background: white;
     --mask: radial-gradient(

@@ -1,11 +1,18 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link as ScrollLink } from "react-scroll";
+import { AudioContext } from "../../AudioContext";
 
 const Moon = ({screenWidth}) => {
   const [isOpen, setIsOpen] = useState(false);
+  const {playMoonOpen, playMoonClose} = useContext(AudioContext);
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
+    if (isOpen) {
+      playMoonClose();
+    } else {
+      playMoonOpen();
+    }
   };
 
   //react-scroll menu

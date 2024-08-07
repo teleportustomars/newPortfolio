@@ -1,46 +1,43 @@
-import headshot from "/src/assets/images/fullHeadshot.jpeg";
+import headshot from "/src/assets/images/newHeadshot.png";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
-const AboutMe = ({ isMobile }) => {
-
+const AboutMe = ({ isMobile, Title }) => {
   //download resume docx
-  const ResumeDL = () => { 
-
-    const resumeLocation = "/src/assets/downloads/dlResume.docx";
+  const ResumeDL = () => {
+    const resumeLocation = "/MattAlexanderResume.pdf";
 
     const resumeClass = isMobile ? "mobileRes" : "desktopRes";
 
-
     return (
       <div className={resumeClass} id="resume-dl">
-        <a href={resumeLocation} download="My_Resume.docx">Download My Resume</a>
+        <a href={resumeLocation} download="MattAlexanderResume.pdf">
+          Download My Resume
+        </a>
       </div>
-    )
-  }
+    );
+  };
 
   return (
     <div id="aboutMe" className="sectionWrapper">
       <div id="aboutMeContent">
-        <div
-          id="aboutMeLeft"
-          className={isMobile ? "mobileLeft" : "desktopLeft"}
-        >
-          <h1 id="aboutMeH1">About Me</h1>
-        </div>
+      {<Title section="About Me\" color="primary"/> || <Skeleton />}
         <div id="aboutMeRight">
           <ResumeDL isMobile={isMobile} />
-
           <div id="headshotContainer">
-            <img
+            {<img
               src={headshot}
               className={isMobile ? "mobileHeadshot" : "desktopHeadshot"}
               id="headshot"
               alt="My Headshot"
-            />
+            /> || <Skeleton height={isMobile ? 300 : 400} />}
           </div>
           <p id="aboutMeText">
-            I&apos;m Matt Alexander, a concept-to-code creative designer and developer able to ideate, design, and develop your brand. I 
-            aim to work with small businesses and marginalized communities to
-            bring their passions to life in graphics and websites that are at once performant, striking, and effective.
+            I&apos;m Matt Alexander, a concept-to-code creative designer and
+            developer able to ideate, design, and develop your brand. I aim to
+            work with small businesses and marginalized communities to bring
+            their passions to life in graphics and websites that are at once
+            performant, striking, and effective.
           </p>
         </div>
       </div>

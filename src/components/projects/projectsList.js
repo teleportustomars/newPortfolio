@@ -1,4 +1,5 @@
 import clickbaitSC from "/src/assets/screenshots/clickbait.png";
+import clickbaitBack from "/src/assets/screenshots/clickbaitBack.jpg";
 import orfuSC from "/src/assets/screenshots/orfu.png";
 import joshSC from "/src/assets/screenshots/josh.png";
 import loveselfSC from "/src/assets/screenshots/loveself.png";
@@ -29,7 +30,7 @@ const projectsList = [
   projectLink: "https://042012.xyz/orfuArchive/index.html",
   projectIcon: orfuIcon,
   screenshot: orfuSC,
-  skills: ["WordPress", "HTML", "SCSS", "JavaScript", "Adobe CC"],
+  skills: ["WordPress", "HTML", "CSS", "Adobe CC"],
   background: "iceblue"
 },
 {
@@ -39,11 +40,12 @@ const projectsList = [
   projectLink: "https://teleportustomars.itch.io/clickbait",
   projectIcon: cbIcon,
   screenshot: clickbaitSC,
+  backside: clickbaitBack,
   skills: ["React", "Socket.io", "HTML", "SCSS", "JavaScript", "Adobe CC"],
   background: "tangerine"
 },
 {
-  projectName: "joshwolper.github.io",
+  projectName: "josh wolper's portfolio",
   projectDescription: "portfolio for a graphics researcher",
   projectDescShort:"research portfolio",
   projectLink: "https://joshwolper.github.io/",

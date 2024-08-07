@@ -59,15 +59,12 @@ body {
 
 .App {
   position: relative;
-  // overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   align-content: center;
-  // width: 100%;
   height: fit-content;
-  // overflow-x: hidden;
   width: calc(100vw - 17px);
   font-size: inherit;
 
@@ -76,6 +73,12 @@ body {
 .mobile {
   width: 100% !important;
   overflow-x: hidden !important;
+}
+
+.parallaxSetter {
+  height: fit-content;
+  width: fit-content;
+  position: relative;
 }
 
 @import "./components/about-me/AboutMe.scss";
@@ -87,3 +90,5 @@ body {
 @import "./components/site-title/pageTitle.scss";
 @import "./components/starfield/Starfield.scss";
 @import "./components/skills/Skills.scss";
+@import "./components/titles/Titles.scss";
+@import "./components/audio-control/AudioController.scss";

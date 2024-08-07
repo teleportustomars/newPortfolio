@@ -5,60 +5,76 @@
 
 #project-instructions {
   font-family: "Tilt Neon" !important;
-  rotate: -15deg;
   text-align: center;
+  transform: translateX(150px) translateY(-13px) rotate(-5deg);
   font-size: 1.5rem;
   position: relative;
-  animation: textFlickerPink 7s linear infinite;
+  color: white;
+  text-shadow: 0px 0px 5px white, 0px 0px 10px white;
+  // animation: textFlickerPink 7s linear infinite;
 }
 
-#project-header {
-  font-size: 5rem !important;
-  // transform: rotate(-1deg);
+#project-header-parent {
+  position: relative;
+}
+
+.project-header {
+  text-align: center !important;
+  font-family: "Shorelines", cursive;
+  z-index: 9999;
+  position:relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5%;
-  text-align: center;
-  font-family: "Shorelines", cursive;
-  font-size: 3rem;
-  margin: unset;
   position: relative;
+  margin: unset;
   rotate: -15deg;
-  // z-index: 9999;
-  // white-space: nowrap;
-  -webkit-animation: textFlickerPink 5s linear infinite;
-          animation: textFlickerPink 5s linear infinite;
-
+  // opacity: .8;
+  color: white !important;
+  // &:before {
+  //   color: white;
+  //   content: "";
+  //   position: absolute;
+  //   border: 8px solid rgba(255, 255, 255, 0.8);
+  //   background-color: rgba(0, 0, 0, 0.5);
+  //   -webkit-backdrop-filter: blur(5px);
+  //           backdrop-filter: blur(5px);
+  //   z-index: -1;
+  //   border-radius: 50%;
+  //   height: 200px;
+  //   width: 200px;
+  //   box-shadow: 0px 0px 4px white, inset 0px 0px 4px white,
+  //     0px 0px 50px $lightpink, 0px 0px 30px $lightpink,
+  //     inset 0px 0px 10px $lightpink;
+  //   @media (max-width: 650px) {
+  //     height: 150px;
+  //     width: 150px;
+  //     border-width: 5px !important;
+  //   }
+  // }
   @media (max-width: 650px) {
     font-size: 3rem !important;
   }
-  &:before {
-    content: "";
+
+}
+
+.project-header-glow {
+  color: white;
     position: absolute;
-    border: 8px solid rgba(255, 255, 255, 0.8);
-    background-color: rgba(0, 0, 0, 0.5);
-    -webkit-backdrop-filter: blur(5px);
-            backdrop-filter: blur(5px);
-    z-index: -1;
-    border-radius: 50%;
-    height: 250px;
-    width: 250px;
-    box-shadow: 0px 0px 4px white, inset 0px 0px 4px white,
-      0px 0px 50px $lightpink, 0px 0px 30px $lightpink,
-      inset 0px 0px 10px $lightpink;
-    @media (max-width: 650px) {
-      height: 150px !important;
-      width: 150px !important;
-      border-width: 5px !important;
-    }
-  }
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-text-stroke: 2px rgba(22, 115, 255, 0.3); /* Outer glow color and size */
+    text-shadow: 0 0 10px rgba(22, 115, 255, 0.6),
+      0 0 20px rgba(22, 115, 255, 0.9), 0 0 30px rgba(22, 115, 255, 1);
+    animation: newFlicker 5s linear infinite;
 }
 
 #projectsParent {
   position: relative;
   margin: auto;
-  z-index: 1000;
+  z-index: 10000;
   width: 100%;
   // width: 1580px;
 }
@@ -74,6 +90,7 @@
   overflow: visible;
   gap: .5rem;
   padding: 1%;
+  background: radial-gradient(circle at center, rgba(41, 0, 23, 0.6) 0%, rgba(0, 0, 0, 0) 90%);
 
   @media screen and (max-width: 800px) {
     flex-direction: column !important;
@@ -88,11 +105,6 @@
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    h2 {
-      font-family: "Stint Ultra Condensed";
-      // color: $moonyellow;
-      font-size: 2rem;
-    }
 
     #content {
       position: relative;
@@ -117,7 +129,7 @@
         // transform: rotate(random(5) + deg);
         z-index: 300;
         width: 100%;
-        min-height: 80%;
+        min-height: 100%;
         position: relative;
         -o-object-fit: cover;
            object-fit: cover;
@@ -140,16 +152,22 @@
       align-items: center;
       margin: auto;    
       border: none;
-      width: 100%;
-      position: relative;
-      z-index: 1;
+      width: 90%;
+      position: absolute;
+      bottom: 10%;
+      // line-height: 2.5rem;
+      font-family: "Oswald", sans-serif;
+      font-weight: 700;
+      line-height: 2rem;
+      z-index: 9999;
       // overflow: hidden;
-      .h-divider {
-        height: 1px;
-        width: 15%;      }
+      h2 {
+        font-size: 2rem;
+        color: white;
+        // -webkit-text-stroke: 2px $blackolive;
+      }
     }
-    #projectStuffBack {
-    }
+
   }
 }
 
@@ -169,7 +187,7 @@
   height: 350px;
   position: relative;
   transform-style: preserve-3d;
-  transition: all .2s ease-out;
+	transition: transform 0.36s cubic-bezier(0.34, 1.56, 0.64, 1);
   z-index: 1000 !important;
 }
 
@@ -212,6 +230,7 @@
         height: 10px;
         background: red;
         border-radius: 50%;
+        box-shadow: 0px 0px 10px black, 0px 0px 5px black;
       }
       &:after {
         content: "";
@@ -223,21 +242,27 @@
         height: 10px;
         background: red;
         border-radius: 50%;
+        box-shadow: 0px 0px 10px black;
+
       }
+}
+
+.flipped.card-content {
+  background: black !important;
 }
 
 .flip-card-back {
   // background-color: $midred;
   transform: rotateY(180deg) translateZ(1px); /* Adjust the translateZ value as needed */
-  box-shadow: inset 0px 0px 12px 5px $lightpink, inset 0px 0px 4px 4px rgba(255, 255, 255, 0.3) !important;
+  // box-shadow: inset 0px 0px 12px 5px $lightpink, inset 0px 0px 4px 4px rgba(255, 255, 255, 0.3) !important;
   border-radius: 5px;
   p {
-    font-family: "Neucha", cursive;
+    font-family: "Oswald";
     font-size: 1.2rem;
-    padding: 0%;
+
   }
   #projectLinkText {
-    font-family: "Neucha", cursive;
+    font-family: "Oswald";
     font-size: 1.5rem;
     position: absolute;
     top: 8%;
@@ -245,10 +270,25 @@
     rotate: -30deg;
     opacity: 0.8;
   }
+  
+  #projectStuffBack {
+    font-family: "Oswald";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // color: black;
+    h2 {
+      font-size: 1.8rem;
+      line-height: 1.8rem;
+      padding-bottom: 5%
+    }
+    p {
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
 
-  #skillsAndIcon {
-
-  }  
+  }
 
   #projIcon {
     width: 50%;
@@ -276,21 +316,21 @@
 
   overflow: hidden;
   position: relative;
-      &:before {
-        content: "";
-        position: absolute;
-        background-color: lightgrey;
-        mix-blend-mode: multiply;
-        opacity: 0.7;
-        border-radius: 50%;
-        $pValue: -3%;
-        top: $pValue;
-        left: $pValue;
-        right: $pValue;
-        bottom: $pValue;
-        z-index: -1;
-        rotate: 20deg;
-      }
+      // &:before {
+      //   content: "";
+      //   position: absolute;
+      //   background-color: lightgrey;
+      //   mix-blend-mode: multiply;
+      //   opacity: 0.7;
+      //   border-radius: 50%;
+      //   $pValue: -3%;
+      //   top: $pValue;
+      //   left: $pValue;
+      //   right: $pValue;
+      //   bottom: $pValue;
+      //   z-index: -1;
+      //   rotate: 20deg;
+      // }
 }
 
 .card-content {
@@ -301,7 +341,7 @@
   align-content: center;
   gap: 1rem;
   height: 100%;
-  padding: 5px;
+  padding: 3px;
   text-align: center;
   height: 100%;
   overflow: hidden;
@@ -318,80 +358,119 @@
 
 #skillList {
   position: relative;
-  // &:before {
-  //   content: "";
-  //   position: absolute;
-  //   transform: rotate(-7deg);
-  //   z-index: 100;
-  //   top: 15%;
-  //   left: 15%;
-  //   bottom: 15%;
-  //   right: 15%;
-  //   border-radius: 50%;
-  //   display: flex;
-  //   justify-content: center;
-  //   // background-color: grey;
-  // }
+  font-family: "Oswald";
+  font-size: 1.2rem;
+  //italicize
+  font-style: italic;
+  font-weight: 200;
 }
  
 //loveself
 .mossgreen {
-  .h-divider {
-    background-color: $seashell;
-  }
-  background: linear-gradient(to right, $applegreen 0%, $mossgreen 100%);
-  #projectStuff:before {
-    background-color: $applegreen;
-  #projectStuffBack:before {
-    display: none !important;
-  }
-
+  background: $mossgreen;
+  #projectStuff {
+    &:before {
+      background-color: $applegreen;
+    }
+    background: $mossgreen;
+    rotate: 5deg;
   }
 }
 
 //joshsite
 .chocolate {
-  background: linear-gradient(to bottom right, $midred 0%, $chocolate 100%);
-  #projectStuff:before {
-    background-color: $midred;
-  }
-  .h-divider {
-    background-color: $ash;
+  // background: linear-gradient(to bottom right, $midred 0%, $chocolate 100%);
+  background: $midred;
+  #projectStuff {
+    &:before {
+      background-color: $midred;
+    }
+    background: $midred;
+    rotate: -2deg;
   }
 }
 
 //clickbait
 .tangerine {
-  background: linear-gradient(to bottom right, $moonyellow 0%, $tangerine 100%);
-  color: $blackolive;
-  .h-divider {
-    background-color: $blackolive;
-  }
-  #projectStuff:before {
-    background-color: $brightpink;
+  // background: linear-gradient(to bottom right, $moonyellow 0%, $tangerine 100%);
+  background: $tangerine;
+  #projectStuff {
+    &:before {
+      background-color: $tangerine;
+    }
+    background: $tangerine;
+    rotate: 2deg;
   }
 }
 
+.flip-card-back.tangerine {
+  background: url("/src/assets/screenshots/clickbaitBack.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  // border: 3px solid $tangerine;
+}
+
+.flip-card-back.iceblue {
+  background: url("/src/assets/screenshots/orfuBack.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  // border: 3px solid $lightblue;
+}
+
+.flip-card-back.mossgreen {
+  background: url("/src/assets/screenshots/loveselfBack.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  // border: 3px solid $mossgreen;
+}
+
+.flip-card-back.chocolate {
+  background: url("/src/assets/screenshots/joshBack.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  // border: 3px solid $midred;
+  h2,p{
+    color: white !important;
+  }
+}
+
+.flip-card-back.brightpink {
+  background: url("/src/assets/screenshots/portBack.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  // border: 3px solid $lightpink;
+  h2,p{
+    color: white !important;
+  }
+}
+ 
+
 //orfu
 .iceblue {
-  background: linear-gradient(to bottom left, $iceblue 0%, $lightblue 100%);
-  // $iceblue;
-  color: $blackolive;
-  .h-divider {
-    background-color: $blackolive;
-  }
-  #projectStuff:before {
-    background-color: $lightblue;
+  background: $lightblue;
+  #projectStuff {
+    &:before {
+      background-color: $lightblue;
+    }
+    background: $lightblue;
+    rotate: 2deg;
   }
 }
 
 //oldSite
 .brightpink {
-  .h-divider {
-    background-color: $seashell;
-  }
-    background: linear-gradient(to bottom, $lightpink 0%, $brightpink 100%);
-    #projectStuff:before {
-      background-color: $lightpink;
+    background: $lightpink;
+    #projectStuff{
+      background: $lightpink;
+      rotate: 6deg;
+
+      &:before {
+        background-color: $lightpink;
+      }
     }
   }

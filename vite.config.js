@@ -11,5 +11,6 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['@emailjs/browser'],
   },
+  base: './',
   // base: '/newPortfolio/',
 })

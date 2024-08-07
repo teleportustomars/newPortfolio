@@ -1,12 +1,37 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useCallback, useContext } from "react";
 import emailjs from "@emailjs/browser";
+import { AudioContext } from "../../AudioContext";
 
-const ContactForm = () => {
+const ContactForm = ({Title}) => {
   const [success, setSuccess] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [, setIsError] = useState(false);
 
+  const { useSound, playPencilScratch, stopPencilScratch } = useContext(AudioContext);
+
   const formData = useRef();
+
+  const debounce = (func, delay) => {
+    let timeoutId;
+    return (...args) => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => func(...args), delay);
+    };
+  };
+
+  const debouncedStopPencilScratch = useCallback(
+    debounce(() => {
+      stopPencilScratch();
+    }, 1000),
+    [stopPencilScratch]
+  );
+
+  const handleInputChange = useCallback(() => {
+    if (useSound) {
+      playPencilScratch();
+      debouncedStopPencilScratch();
+    }
+  }, [useSound, playPencilScratch, debouncedStopPencilScratch]);
 
   //send email to emailjs
   const sendEmail = (e) => {
@@ -57,14 +82,14 @@ const ContactForm = () => {
 
   return (
     <div id="contactParent">
-      <h1 id="contactH1">Contact Me</h1>
+      <Title section="Contact Me\" color="tertiary" />
       <form id="contactForm" ref={formData} onSubmit={sendEmail}>
         <label>Name</label>
-        <input type="text" name="user_name" required />
+        <input type="text" name="user_name" required onChange={handleInputChange} />
         <label>Email</label>
-        <input type="email" name="user_email" required />
+        <input type="email" name="user_email" required onChange={handleInputChange} />
         <label>Message</label>
-        <textarea name="message" />
+        <textarea name="message" onChange={handleInputChange} />
         <SubmitButton />
       </form>
     </div>

@@ -1,7 +1,10 @@
 import projectsList from './projectsList'; //js object
 import Project from "./Project.jsx";
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
 
-const Projects = ({isMobile}) => {
+
+const Projects = ({isMobile, Title}) => {
 
   //render instructions based on device
   const instructionText = () => {
@@ -14,12 +17,9 @@ const Projects = ({isMobile}) => {
 
   return (
     <div id="projectsParent">
-      <div id="project-container"><div>
-        <h1 id="project-header">
-          Projects
-        </h1>
-        <p id="project-instructions">{instructionText()}</p>
-      </div>
+      <Title section="Projects\" color="secondary"/>
+      <p id="project-instructions">{instructionText()}</p>
+      <div id="project-container">
         {projectsList.map((project, index) => (
           <Project
             key={index}
@@ -32,7 +32,7 @@ const Projects = ({isMobile}) => {
             skills={project.skills}
             bgColor={project.background}
           />
-        ))}
+        )) || <Skeleton count={3} />}
       </div>
     </div>
   );

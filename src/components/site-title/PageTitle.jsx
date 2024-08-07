@@ -1,34 +1,51 @@
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
+import Title from "../titles/Titles.jsx";
+import { useParallax } from "react-scroll-parallax";
 
-
-const PageTitle = () => { //site title seen on load
-  const [windowHeight, setWindowHeight] = useState();
+// eslint-disable-next-line react/prop-types
+const PageTitle = ({ screenSize }) => {
+  //site title seen on load
 
   const style = {
-    height: `${windowHeight}px`,
+    // eslint-disable-next-line react/prop-types
+    height: `${screenSize.height}px`,
   };
 
-  //set window height to ensure page title is always at the bottom on load and on resize
-  useEffect(() => {
-    setWindowHeight(window.innerHeight);
-    window.addEventListener("resize", () => {
-      setWindowHeight(window.innerHeight);
-    });
+  const titleProps = {
+    speed: 3,
+    translateY: [-40, 40],
+    translateX: [-40, 40],
+    // scale: [1,.5],
+  };
 
-    return () => {
-      window.removeEventListener("resize", () => {
-        setWindowHeight(window.innerHeight);
-      });
-    };
-  }, []);
+  // const {ref} = useParallax({speed: titleProps.speed, translateY: titleProps.translateY, translateX: titleProps.translateX, scale: titleProps.scale,})
 
-  return (
-    <div id="pageTitle" style={style}>
-      <div id="downArrow" />
+  const parallaxProgress = useParallax({
+    onProgressChange: (progress) => {
+      if (parallaxProgress.ref.current) {
+        parallaxProgress.ref.current.style.setProperty(
+          "--progress",
+          progress.toString()
+        );
+      }
+    },
+  });
+
+  const PageTitleContent = () => {
+    return (
       <div id="pageTitleContent">
-        <h1>matt alexander</h1>
+        <Title section="Matt Alexander" color="main" />
         <h2>nocturnal web weaver</h2>
       </div>
+    );
+  };
+
+  return (
+    <div ref={parallaxProgress.ref} id="pageTitle" >
+      <div id="downArrow" />
+      {<PageTitleContent /> || <Skeleton count={10} />}
     </div>
   );
 };

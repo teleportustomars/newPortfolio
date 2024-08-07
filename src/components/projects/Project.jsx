@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
+import { useState, useContext } from "react";
+import {AudioContext} from "../../AudioContext";
 
 const Project = ({ //individual projects, set up as flip cards
   projectName,
@@ -14,12 +15,15 @@ const Project = ({ //individual projects, set up as flip cards
   const [flipped, setFlipped] = useState(false);
   let touchStartX = 0;
   let touchEndX = 0;
+  const {playRandomPageFlip} = useContext(AudioContext);
 
   const handleMouseEnter = () => {
+    playRandomPageFlip();
     setFlipped(true);
   };
 
   const handleMouseLeave = () => {
+    playRandomPageFlip();
     setFlipped(false);
   };
 
@@ -46,7 +50,7 @@ const Project = ({ //individual projects, set up as flip cards
       <>
         <img id="screenShot" src={screenshot} alt={projectName} />
         <div id="projectStuff">
-          <div className="h-divider" /><h2>{projectDescShort}</h2><div className="h-divider" />
+          <h2>{projectDescShort}</h2>
         </div>
       </>
     );
@@ -56,11 +60,11 @@ const Project = ({ //individual projects, set up as flip cards
     return (
       <>
         <div id="projectStuffBack">
-          <h2>{projectName}</h2>
-          <p>{projectDescription}</p>
+          <h2>{projectName}:</h2>
+          <p>{projectDescription}, made with</p>
         </div>
-        <div className="divider" />
-          <div id="projIcon"><img src={projectIcon} /></div>
+        {/* <div className="divider" /> */}
+          {/* <div id="projIcon"><img src={projectIcon} /></div> */}
           <ul id="skillList">
             {skills.map((skill, index) => (
               <li key={index}>{skill}</li>

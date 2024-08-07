@@ -9,22 +9,6 @@ export class QuadtreeNode {
     this.children = null;
   }
 
-  // find points in range of a circle
-
-  // findPointsInRange(x, y, radius) {
-  //   const pointsInRange = [];
-
-  //   if (!this.children) {
-  //     for (let point of this.points) {
-  //       const distance = Math.sqrt((x - point.x) ** 2 + (y - point.y) ** 2);
-  //       if (distance <= radius) {
-  //         pointsInRange.push(point);
-  //       }
-  //     }
-
-  //   }
-  // }
-
   // Insert a point into the quadtree
   insert(point, starID) {
     // If the point is outside the bounds of this node, ignore it
@@ -98,7 +82,6 @@ export class QuadtreeNode {
       } else {
         // console.log("no children");
         // Otherwise, query this node
-        //let returnPoints = [];
         for (let i = 0; i < this.points.length; i++) {
           const point = this.points[i];
           const distance = Math.sqrt((x - point.x) ** 2 + (y - point.y) ** 2);
@@ -106,8 +89,6 @@ export class QuadtreeNode {
             returnPoints.push(this.starIDs[i]);
           }
         }
-        // console.log("returning points", returnPoints);
-        //return returnPoints;
       }
       return returnPoints;
     }

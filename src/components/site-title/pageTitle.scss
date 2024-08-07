@@ -11,13 +11,18 @@
     z-index: 1000;
     pointer-events: none;
     user-select: none;
+    position: absolute;
+    bottom: 0;
     h1 {
-      font-family: "Shorelines", cursive;
-      margin: unset;
-      animation: textFlicker 5s linear infinite;
-      font-size: 3.5rem;
-      color: $seashell;
+      font-size: 3.5rem !important;
     }
+    // h1 {
+    //   font-family: "Shorelines", cursive;
+    //   margin: unset;
+    //   // animation: newFlicker 5s linear infinite;
+    //   font-size: 3.5rem;
+    //   color: $seashell;
+    // }
     h2 {
       font-family: "Neucha", cursive;
       color: $seashell;
@@ -31,7 +36,7 @@
     height: 70px;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    filter: drop-shadow(0 0 1rem $lightblue) drop-shadow(0 0 .5rem $lightblue) drop-shadow(0 0 1rem $lightblue);
+    filter: drop-shadow(0 0 1rem $moonyellow) drop-shadow(0 0 .5rem $moonyellow) drop-shadow(0 0 1rem $lightblue);
     animation: bob 1.5s ease-in-out infinite;
     cursor: pointer !important;
   }
